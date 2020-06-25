@@ -435,8 +435,9 @@ form {
 }
 
 form label {
-	font-size: 1.5rem;
-	pointer-events: none;
+	letter-spacing: 0.1rem;
+	font-size: 2rem;
+	position: relative;
 }
 
 input,
@@ -446,8 +447,70 @@ textarea {
 	padding: 1rem;
 	outline-color: #fd57bf;
 	background: rgba(210, 180, 140, 0.2);
+	border-image: linear-gradient(to top, #ffe838, #fd57bf);
+	border-image-slice: 1;
+	border-width: 0.18rem;
+	color: white;
 }
 
+select {
+	margin-bottom: 3rem;
+	outline: none;
+}
+
+select option {
+	background-color: tan;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type="text"],
+input[type="email"] {
+	position: relative;
+	border: none;
+	border-bottom: 0.1rem solid #ffe838;
+	border-image: linear-gradient(to left, #ffe838, #fd57bf);
+	border-image-slice: 1;
+	outline: none;
+	background: transparent;
+	padding: 0.1rem 1.6rem;
+	bottom: 1.5rem;
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+}
+
+input[type="text"] {
+	margin-bottom: 3rem;
+	bottom: 2.5rem;
+}
+
+label[for="name"] {
+	position: absolute;
+	top: 14rem;
+	transition: 0.5s;
+}
+
+label[for="email"] {
+	position: absolute;
+	top: 20rem;
+	transition: 0.5s;
+}
+
+input[type="text"]:focus ~ label[for="name"],
+input[type="text"]:valid ~ label[for="name"] {
+	top: 12rem;
+	font-size: 1.6rem;
+	color: #ffe838;
+}
+
+input[type="email"]:focus ~ label[for="email"],
+input[type="email"]:valid ~ label[for="email"] {
+	top: 18rem;
+	font-size: 1.6rem;
+	color: #ffe838;
+}
 input[type="submit"] {
 	width: initial;
 	background-color: #fd56bf;
