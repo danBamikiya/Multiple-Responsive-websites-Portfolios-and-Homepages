@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family-Poppins:400,500,700");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Start body of the page */
+
+body {
+	background-color: #2f303a;
+	font-family: Poppins, sans-serif;
+	font-size: 1.2rem;
+	color: white;
+	min-height: 100vh; /* this will make the minimum height of the webisite 100% of the height of the screen but it can grow past that for example on a phone screen */
+}
+
+.container {
+	max-width: 1200px; /* this will make the width of the body not more  than 1200px*/
+	margin: 0 auto; /* this makes the body centered horizontally but still maintain a height of 1200px */
+	padding: 0 40px; /* from the 1200px of the width of the body it gives it a padding (internal spacing) on the left and right of 40px */
+}
+
+.full-height-grow {
+	display: flex;
+	flex-direction: column;
+} /* By making the body a flexbox this makes us able to add the flex-grow property to any section of the page so that it will grow more than others */
+
+/* End body of the page */
+
+/* Start Header */
+
+.brand-logo {
+	display: flex;
+	align-items: center;
+	font-size: 1.25rem;
+	color: inherit;
+	text-decoration: none;
+}
+
+.brand-logo-name {
+	margin-left: 1rem;
+}
+
+.main-nav ul {
+	display: flex;
+	list-style: none;
+}
+
+.main-nav a {
+	color: inherit;
+	text-decoration: none;
+	padding: 1rem;
+}
+
+.main-nav a:hover {
+	color: #adadad;
+}
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 140px;
+}
+
+.title {
+	font-weight: 500;
+	font-size: 1.2em;
+	margin-bottom: 2rem;
+}
