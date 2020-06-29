@@ -1,0 +1,88 @@
+.home-main-section {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	flex-grow: 1; /* this will make it grow more than the other siblingns in the parent container */
+}
+
+.home-main-section .img-wrapper {
+	flex-direction: column; /* this will verticlally align it */
+	display: flex;
+	flex-grow: 1; /* this will make it grow more than the other siblings in the parent container */
+	align-items: stretch; /* this will make it strecth verticlally since we're trying to make the image strecth to the end of the page as possible */
+	justify-content: flex-end; /* this will get it close to the sibling horizontally */
+}
+
+.home-main-section .lady-image {
+	background: url(../images/landing-page-girl.png) no-repeat bottom left;
+	background-size: contain;
+	flex-grow: 1; /* for it to occupy the full height of the section its inside of   */
+	max-height: 70vh;
+	max-width: 30vw;
+}
+
+.home-main-section .call-to-action {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1rem;
+	align-self: center;
+}
+
+.home-page-circle-1 {
+	position: absolute;
+	width: 20vw;
+	height: 20vw;
+	border-radius: 50%;
+	background-color: rgba(188, 58, 128, 0.1);
+	bottom: 5vw;
+	left: 3vw;
+	z-index: -1;
+}
+
+.home-page-circle-2 {
+	position: absolute;
+	width: 22vw;
+	height: 22vw;
+	border-radius: 50%;
+	background-color: rgba(52, 87, 178, 0.1);
+	top: 10vh;
+	left: 35vw;
+	z-index: -1;
+}
+
+.home-page-circle-3 {
+	position: absolute;
+	overflow: hidden;
+	width: 45vw;
+	height: 45vw;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.home-page-circle-3::before {
+	content: "";
+	transform: translate(40%, 40%);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	background-color: rgba(52, 87, 178, 0.1);
+}
+
+@media (max-width: 900px) {
+	.home-main-section .img-wrapper {
+		display: none;
+	}
+
+	.home-main-section {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 600px) {
+	.home-page-circle-2 {
+		top: 20vw;
+	}
+}

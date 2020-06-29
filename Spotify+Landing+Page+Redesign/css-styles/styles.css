@@ -22,6 +22,8 @@ body {
 	max-width: 1200px; /* this will make the width of the body not more  than 1200px*/
 	margin: 0 auto; /* this makes the body centered horizontally but still maintain a height of 1200px */
 	padding: 0 40px; /* from the 1200px of the width of the body it gives it a padding (internal spacing) on the left and right of 40px */
+	flex-grow: 1;
+	width: 100%;
 }
 
 .full-height-grow {
@@ -45,30 +47,80 @@ body {
 	margin-left: 1rem;
 }
 
-.main-nav ul {
+.main-nav ul,
+.main-footer ul {
 	display: flex;
 	list-style: none;
 }
 
-.main-nav a {
+.main-nav a,
+.footer-nav a {
 	color: inherit;
 	text-decoration: none;
 	padding: 1rem;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.footer-nav a:hover {
 	color: #adadad;
 }
 
-.main-header {
+.main-header,
+.main-footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.main-header {
 	height: 140px;
+}
+
+.main-footer {
+	height: 70px;
+	background-color: #202027;
+	font-weight: bold;
+}
+
+.main-footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.social-link img {
+	width: 1em;
+	margin-right: 0.25rem;
 }
 
 .title {
 	font-weight: 500;
+	font-size: 3em;
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+.subtitle {
+	font-weight: 500;
 	font-size: 1.2em;
 	margin-bottom: 2rem;
+}
+
+.btn {
+	color: white;
+	background-color: #1762a7;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	font-size: 0.9rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #2190d8;
+}
+
+.btn:focus {
+	background-color: #2796ff;
 }
