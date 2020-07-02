@@ -10,6 +10,28 @@ $(document).ready(function () {
 		$(".menu-toggler").removeClass("open");
 	}); /** this will close the menu overlay after one of the nav links has been clicked */
 
+	$("input[type='text']").on("focus", () => {
+		$("label[for='name']").toggleClass("active");
+	});
+
+	$("input[type='email']").on("focus", () => {
+		$("label[for='email']").toggleClass("active");
+	});
+
+	$("input[type='text']").on("focusout", () => {
+		if ($(this).value === "") {
+			$("label[for='text']").removeClass("active");
+			$(this).blur();
+		}
+	}); /* Not working */
+
+	$("input[type='email']").on("focusout", () => {
+		if ($(this).value === "") {
+			$("label[for='email']").removeClass("active");
+			$(this).blur();
+		}
+	}); /* Not working */
+
 	$("nav a[href*='#']").on("click", function () {
 		$("html, body").animate(
 			{
@@ -30,7 +52,7 @@ $(document).ready(function () {
 
 	AOS.init({
 		easing: "ease",
-		duration: 1080,
+		duration: 1000,
 		// once: true; /** this will make the animation happen only once **/
 	}); /** this adds the aos library to the page so that the animations can be added by addindg the class names to the elements */
 });

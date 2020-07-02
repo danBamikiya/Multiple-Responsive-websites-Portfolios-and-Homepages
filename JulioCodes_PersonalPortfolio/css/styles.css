@@ -44,6 +44,7 @@ section {
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 
 .section-heading {
@@ -424,7 +425,7 @@ li {
 
 /*Start contact*/
 .contact {
-	/* background-color: #221e3f; */
+	background-color: #221e3f;
 	background: url("../img/profileimg.jpeg") no-repeat center fixed;
 	background-size: cover;
 }
@@ -432,6 +433,7 @@ li {
 form {
 	width: 70%;
 	margin: 0 auto;
+	position: relative;
 }
 
 form label {
@@ -464,6 +466,7 @@ select option {
 
 textarea {
 	resize: none;
+	caret-color: #ffe838;
 }
 
 input[type="text"],
@@ -483,34 +486,26 @@ input[type="email"] {
 
 input[type="text"] {
 	margin-bottom: 3rem;
-	bottom: 2.5rem;
 }
 
 label[for="name"] {
-	position: absolute;
-	top: 14rem;
 	transition: 0.5s;
+	top: -1.5rem;
+	position: absolute;
 }
 
 label[for="email"] {
-	position: absolute;
-	top: 20rem;
 	transition: 0.5s;
+	position: absolute;
+	top: 4rem;
 }
 
-input[type="text"]:focus ~ label[for="name"],
-input[type="text"]:valid ~ label[for="name"] {
-	top: 12rem;
+.active {
 	font-size: 1.6rem;
 	color: #ffe838;
+	margin-top: -2.5rem;
 }
 
-input[type="email"]:focus ~ label[for="email"],
-input[type="email"]:valid ~ label[for="email"] {
-	top: 18rem;
-	font-size: 1.6rem;
-	color: #ffe838;
-}
 input[type="submit"] {
 	width: initial;
 	background-color: #fd56bf;
