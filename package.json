@@ -4,7 +4,7 @@
   "description": "a number of homepages and responsive portfolios",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d JulioCodes_PersonalPortfolio"
+    "deploy": "gh-pages -d $FOLDER"
   },
   "repository": {
     "type": "git",
