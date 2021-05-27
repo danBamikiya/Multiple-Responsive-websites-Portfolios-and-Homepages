@@ -18,19 +18,19 @@ $(document).ready(function () {
 		$("label[for='email']").toggleClass("active");
 	});
 
-	$("input[type='text']").on("focusout", () => {
-		if ($(this).value === "") {
-			$("label[for='text']").removeClass("active");
-			$(this).blur();
-		}
-	}); /* Not working */
+	// $("input[type='text']").on("focusout", () => {
+	// 	if ($(this).value === "") {
+	// 		$("label[for='text']").removeClass("active");
+	// 		$(this).blur();
+	// 	}
+	// }); /* Not working */
 
-	$("input[type='email']").on("focusout", () => {
-		if ($(this).value === "") {
-			$("label[for='email']").removeClass("active");
-			$(this).blur();
-		}
-	}); /* Not working */
+	// $("input[type='email']").on("focusout", () => {
+	// 	if ($(this).value === "") {
+	// 		$("label[for='email']").removeClass("active");
+	// 		$(this).blur();
+	// 	}
+	// }); /* Not working */
 
 	$("nav a[href*='#']").on("click", function () {
 		$("html, body").animate(
