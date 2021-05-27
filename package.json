@@ -1,7 +1,7 @@
 {
   "name": "multiple-responsive-website-portfolios-and-homepages",
   "version": "1.0.0",
-  "description": "a number of homepages and responsive portfolios",
+  "description": "A number of homepages and responsive portfolios.",
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d $FOLDER"
